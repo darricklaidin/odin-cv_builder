@@ -1,0 +1,13 @@
+.wrapper {
+  background-color: rgb(230, 230, 230);
+  
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+  
+  width: min(50%, 500px);
+  
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+  padding: 20px;
+}
