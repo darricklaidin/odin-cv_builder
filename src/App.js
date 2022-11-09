@@ -4,13 +4,14 @@ import CV from "./components/CV";
 import style from "./css/App.module.css";
 
 import Experience from "./classes/Experience";
+import Education from "./classes/Education";
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
       'experiences': [new Experience("Google", "Software Engineer", "Melbourne", "Australia", "20 November 2022", "30 December 2023")],
-      'educations': [],
+      'educations': [new Education("University of Melbourne", "Bachelor of Computer Science", "Melbourne", "Australia", "20 November 2022", "30 December 2023")],
     }
   }
   
