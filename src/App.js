@@ -20,7 +20,10 @@ class App extends Component {
   
   buildCV() {
     if (this.state.isGenerated) {
-      return <CV />;
+      return <CV 
+      experiences={this.state.experiences}
+      educations={this.state.educations}
+      />;
     }
   }
   

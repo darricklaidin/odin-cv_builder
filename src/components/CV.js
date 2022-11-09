@@ -11,12 +11,14 @@ class CV extends Component {
   }
   
   render() {
+    const { experiences, educations } = this.props;
+    
     return (
       <div className={style.wrapper}>
         <div className={style.mainContent}>
           <CVDescription />
-          <CVExperience />
-          <CVEducation />
+          <CVExperience experiences={experiences}/>
+          <CVEducation educations={educations}/>
         </div>
         <aside className={style.sideContent}>
           <CVPersonalInformation />

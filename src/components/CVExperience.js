@@ -2,26 +2,33 @@ import React, { Component } from "react";
 import style from "../css/CVExperience.module.css";
 
 class CVExperience extends Component {
-  constructor() {
-    super();
-  }
   
   render() {
+    const { experiences } = this.props;
+    
     return (
       <div className={style.wrapper}>
         <h3>
           Experience
         </h3>
-        <div className={style.info}>
-          <div className={style.content}>
-            <p>Google</p>
-            <p>Software Engineer</p>
-            <p>20 November 2022 - 30 December 2023</p>
-          </div>
-          <div className={style.location}>
-            <p>Melbourne, AU</p>
-          </div>
+        
+        <div className={style.infoWrapper}>
+          {experiences.map((experience) => {
+            return (
+              <div className={style.info} key={experience.id}>
+                <div className={style.content}>
+                  <p>{experience.company}</p>
+                  <p>{experience.jobTitle}</p>
+                  <p>{experience.startDate} - {experience.endDate}</p>
+                </div>
+                <div className={style.location}>
+                  <p>{experience.city}, {experience.country}</p>
+                </div>
+              </div>
+            )
+          })}
         </div>
+        
       </div>
     )
   }
