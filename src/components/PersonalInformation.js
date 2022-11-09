@@ -16,7 +16,7 @@ class PersonalInformation extends Component {
           <input type="text" id="lastName" placeholder="Last Name"></input>
           <input type="text" id="occupation" placeholder="Occupation"></input>
           <input type="text" id="email" placeholder="E-mail"></input>
-          <input type="text" id="description" placeholder="Description"></input>
+          <textarea id="description" placeholder="Description"></textarea>
         </div>
       </div>
     )
