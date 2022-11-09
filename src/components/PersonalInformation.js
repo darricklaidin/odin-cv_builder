@@ -2,9 +2,6 @@ import React, { Component } from "react"
 import style from "../css/PersonalInformation.module.css"
 
 class PersonalInformation extends Component {
-  constructor() {
-    super()
-  }
 
   render() {
     return (
