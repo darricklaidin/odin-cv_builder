@@ -8,15 +8,26 @@ import Education from "./classes/Education";
 
 class App extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
-      'experiences': [new Experience("Google", "Software Engineer", "Melbourne", "Australia", "20 November 2022", "30 December 2023")],
-      'educations': [new Education("University of Melbourne", "Bachelor of Computer Science", "Melbourne", "Australia", "20 November 2022", "30 December 2023")],
-    }
+      "experiences": [new Experience("Google", "Software Engineer", "Melbourne", "Australia", "20 November 2022", "30 December 2023")],
+      "educations": [new Education("University of Melbourne", "Bachelor of Computer Science", "Melbourne", "Australia", "20 November 2022", "30 December 2023")],
+      "isGenerated": false,
+    };
+    this.buildCV = this.buildCV.bind(this);
+    this.onGenerateButtonClicked = this.onGenerateButtonClicked.bind(this);
   }
   
   buildCV() {
-    return <CV />;
+    if (this.state.isGenerated) {
+      return <CV />;
+    }
+  }
+  
+  onGenerateButtonClicked() {
+    this.setState({
+      "isGenerated": true,
+    });
   }
 
   render() {
@@ -25,7 +36,10 @@ class App extends Component {
         <Builder 
         experiences={this.state.experiences}
         educations={this.state.educations}
+        isGenerated={this.state.isGenerated}
+        onGenerateButtonClicked={this.onGenerateButtonClicked}
         />
+        {this.buildCV()}
       </div>
     )
   }

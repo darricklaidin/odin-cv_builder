@@ -6,18 +6,17 @@ import style from "../css/Builder.module.css"
 
 class Builder extends Component {
   constructor() {
-    super()
+    super();
   }
 
   render() {
-    const { experiences, educations } = this.props;
-    
+    const { experiences, educations, onGenerateButtonClicked } = this.props;
     return (
       <div className={style.wrapper}>
         <PersonalInformation />
         <Experience experiences={experiences}/>
         <Education educations={educations}/>
-        <button>Generate</button>
+        <button onClick={onGenerateButtonClicked}>Generate</button>
       </div>
     )
   }

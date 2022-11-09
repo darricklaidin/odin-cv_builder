@@ -1,0 +1,18 @@
+.wrapper {
+  background-color: rgb(189, 189, 189);
+  
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  
+  padding: 50px;
+  
+  width: 800px;
+  aspect-ratio: 1/1.414;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 50px
+}
