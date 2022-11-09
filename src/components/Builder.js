@@ -10,11 +10,13 @@ class Builder extends Component {
   }
 
   render() {
+    const { experiences, educations } = this.props;
+    
     return (
       <div className={style.wrapper}>
         <PersonalInformation />
-        <Experience />
-        <Education />
+        <Experience experiences={experiences}/>
+        <Education educations={educations}/>
         <button>Generate</button>
       </div>
     )
