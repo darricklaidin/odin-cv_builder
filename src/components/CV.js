@@ -6,9 +6,6 @@ import CVEducation from "./CVEducation";
 import CVPersonalInformation from "./CVPersonalInformation";
 
 class CV extends Component {
-  constructor() {
-    super();
-  }
   
   render() {
     const { experiences, educations } = this.props;

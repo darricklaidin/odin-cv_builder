@@ -5,9 +5,6 @@ import Education from "./Education"
 import style from "../css/Builder.module.css"
 
 class Builder extends Component {
-  constructor() {
-    super();
-  }
 
   render() {
     const { experiences, educations, onGenerateButtonClicked } = this.props;

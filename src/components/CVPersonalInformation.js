@@ -7,9 +7,9 @@ class CVPersonalInformation extends Component {
       <div className={style.wrapper}>
         <h3>Personal Information</h3>
         <div className={style.content}>
-          <p>Donkey Kong</p>
-          <p>Software Engineer</p>
-          <p>dkong@gmail.com</p>
+          <p>{String(document.getElementById("firstName").value) + " " + String(document.getElementById("lastName").value)}</p>
+          <p>{document.getElementById("occupation").value}</p>
+          <p>{document.getElementById("email").value}</p>
         </div>
       </div>
     )

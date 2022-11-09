@@ -10,8 +10,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      "experiences": [new Experience("Google", "Software Engineer", "Melbourne", "Australia", "20 November 2022", "30 December 2023")],
-      "educations": [new Education("University of Melbourne", "Bachelor of Computer Science", "Melbourne", "Australia", "20 November 2022", "30 December 2023")],
+      "experiences": [new Experience()],
+      "educations": [new Education()],
       "isGenerated": false,
     };
     this.buildCV = this.buildCV.bind(this);
